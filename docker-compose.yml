@@ -1,0 +1,15 @@
+version: '3.1'
+
+services:
+  web:
+    build: .
+    command: "bash /home/docker/entrypoint.sh"
+    volumes:
+      - ${PWD}/data:/data
+      - ${PWD}/htpasswd_d:/htpasswd_d
+      - ${PWD}/anafora_sock:/var/run/anafora_sock
+    environment:
+      PROJECT_SETTING_FILE: /data/sampleanaforaprojectfile/.setting.xml
+      PROJECT_ROOT: /data/sampleanaforaprojectfile
+    ports:
+      - "8080:80"

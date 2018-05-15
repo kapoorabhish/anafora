@@ -1,9 +1,10 @@
 import sys, os
 #Django settings for web project.
 
-DEBUG = True
+DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 
+ALLOWED_HOSTS = ['*']
 ADMINS = (
     # ('Your Name', 'your_email@example.com'),
 )
@@ -63,7 +64,7 @@ MEDIA_URL = ''
 # URL prefix for static files.
 # Example: "http://media.lawrence.com/static/"
 # e.g.  STATIC_ROOT = '/data/home/verbs/student/wech5560/Research/anaforaDevelop/src/main/static'
-STATIC_ROOT = ''
+STATIC_ROOT = '/var/www/html/anafora_static'
 #STATIC_ROOT = '/data/home/verbs/student/wech5560/Research/TemporalPreAnnotation/main/StaticFiles'
 # e.g.  STATIC_URL = '/static/'
 STATIC_URL = '/static/'
@@ -75,7 +76,7 @@ STATICFILES_DIRS = (
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
-    '',
+    '/home/docker/static',
     )
 #    /data/home/verbs/student/wech5560/Research/anaforaDevelop/src/main/static',
 #    '/data/home/verbs/student/wech5560/Research/anaforaDevelop/src/main/static/css',
@@ -124,7 +125,7 @@ ROOT_URLCONF = 'web.urls'
 WSGI_APPLICATION = 'web.wsgi.application'
 
 TEMPLATE_DIRS = (
-    "",
+    "/home/docker/Templates",
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
@@ -179,7 +180,7 @@ TEST_RUNNER = 'testing.DatabaselessTestRunner'
 
 # Assign the anafora project file directory path
 # e.g.  ANAFORA_PROJECT_FILE_ROOT = "/data/home/verbs/student/wech5560/Research/KnowtatorProcessing/data/anaforaProjectFile/"
-#ANAFORA_PROJECT_FILE_ROOT = ""
+ANAFORA_PROJECT_FILE_ROOT = os.environ['PROJECT_ROOT']
 
 # Assign the Digest auth group file location
 # e.g.  GROUP_FILE = '/data/anafora-event/site/anafora-event.group'
@@ -187,8 +188,8 @@ GROUP_FILE = ''
 
 # Assign the group name for the admin
 # e.g.  ADMIN_GROUPNAME = 'anaforaadmin'
-ADMIN_GROUPNAME = ''
+ADMIN_GROUPNAME = 'root'
 
 # Assign the setting file in the project directory
 # e.g. ANAFORA_PROJECT_SETTING_FILENAME = ".setting.xml"
-ANAFORA_PROJECT_SETTING_FILENAME = ""
+ANAFORA_PROJECT_SETTING_FILENAME = os.environ['PROJECT_SETTING_FILE']

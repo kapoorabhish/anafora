@@ -1,0 +1,4 @@
+anafora_sock
+*.pyc
+.git
+data

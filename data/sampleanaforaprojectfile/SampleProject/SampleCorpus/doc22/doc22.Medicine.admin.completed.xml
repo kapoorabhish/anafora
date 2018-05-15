@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<data>
+<info>
+  <savetime>17:03:33 15-04-2018</savetime>
+  <progress>in-progress</progress>
+</info>
+
+<schema path="./" protocol="file">temporal.schema.xml</schema>
+
+<annotations>
+	<entity>
+		<id>1@e@doc22@admin</id>
+		<span>98,111</span>
+		<type>Disease/Disorder</type>
+		<parentsType>Entities</parentsType>
+		<properties>
+			<UMLS_CUI></UMLS_CUI>
+			<Polarity>Positive</Polarity>
+			<Type></Type>
+			<Location></Location>
+		</properties>
+	</entity>
+
+</annotations>
+
+</data>
