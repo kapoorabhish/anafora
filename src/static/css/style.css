@@ -792,7 +792,7 @@ progress[aria-valuenow]:before  {
 #propertyContextMenu .context-menu-list {
 	min-width: 120px;
 	max-width: 350px;
-	
+	max-height: 400px;
 	display: block;
 	list-style-type: none;
 	
