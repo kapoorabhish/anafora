@@ -32,7 +32,8 @@ AnaforaProjectManager.rootPath = settings.ANAFORA_PROJECT_FILE_ROOT
 projectSetting = None
 
 basicContextContent = {
-	'js': (js_lib + js_anafora) if settings.DEBUG else (js_lib + ["js/out.js"]),
+	#'js': (js_lib + js_anafora) if settings.DEBUG else (js_lib + ["js/out.js"]),
+	'js': (js_lib + js_anafora),
 	'js_schemaSpecific': js_schemaSpecific,
 	'css': css,
 	'title': 'Anafora',
